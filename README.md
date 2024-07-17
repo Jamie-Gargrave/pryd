@@ -1,1 +1,1 @@
-test 
+Code Institute | Pride Hackathon 
