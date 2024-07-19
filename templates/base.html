@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% endblock %}
 
+
     {% block extra_css %}
     {% endblock %}
 
@@ -35,7 +36,7 @@
     {% endblock %}
 
     <!-- Page title: Adjustable based on the specific page or section -->
-    <title>PrideFest {% block extra_title %}{% endblock %}</title>
+    <title>PrydFest {% block extra_title %}{% endblock %}</title>
 
 </head>
 
@@ -46,6 +47,7 @@
     {% endblock %}
 
     {% include 'includes/footer.html' %}
+
 
     {% block postloadjs %}
     {% endblock %}
