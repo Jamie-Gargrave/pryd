@@ -50,6 +50,30 @@ The goal section provides a concise summary of the main objective or purpose of 
 
 In the tech section, we provide information about the technology stack, dependencies, and any technical details related to the project.
 
+## Wireframes
+
+Wireframes idea, color scheme is not correct but these wireframes give an idea of how our project should look like. Everything is not in exact right place so feel free to adjust. (Edit this text later)
+
+### Find Event page 
+
+#### Desktop
+<img src="documentation/wireframes/search-event-desktop.png" width="1200"/>
+
+#### Mobile
+<img src="documentation/wireframes/search-event-mobile.png" width="1200"/>
+
+### Create event page idea
+<img src="documentation/wireframes/host-event.png" width="1200"/>
+
+### Event overview page idea (however color scheme is not correct so be aware of that)
+
+#### Desktop
+
+<img src="documentation/wireframes/event-overview-desktop.png" width="1200"/>
+
+#### Mobile
+<img src="documentation/wireframes/event-overview-mobile.png" width="1200"/>
+
 ## Credits
 
 In the credits section, we provide information about the sources used
