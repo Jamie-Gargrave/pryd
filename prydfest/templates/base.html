@@ -1,0 +1,50 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags: Essential for responsive design and basic HTML structure -->
+    {% block meta %}
+
+    {% endblock %}
+
+    {% block extra_meta %}
+    {% endblock %}
+
+    <!-- Bootstrap and custom CSS: Load external and internal stylesheets -->
+    {% block corecss %}
+
+    {% endblock %}
+
+
+    {% block extra_css %}
+    {% endblock %}
+
+    <!-- JavaScript libraries: Includes jQuery, Bootstrap JS, Font Awesome, and Stripe -->
+    {% block corejs %}
+
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
+    <!-- Page title: Adjustable based on the specific page or section -->
+    <title>PrydFest {% block extra_title %}{% endblock %}</title>
+
+</head>
+
+<body>
+    {% include 'includes/navbar.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include 'includes/footer.html' %}
+
+
+    {% block postloadjs %}
+    {% endblock %}
+</body>
+
+</html>
