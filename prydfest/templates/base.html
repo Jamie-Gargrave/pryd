@@ -14,7 +14,7 @@
 
     <!-- Bootstrap and custom CSS: Load external and internal stylesheets -->
     {% block corecss %}
-
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% endblock %}
 
 
@@ -23,7 +23,7 @@
 
     <!-- JavaScript libraries: Includes jQuery, Bootstrap JS, Font Awesome, and Stripe -->
     {% block corejs %}
-
+    <script src="{% static 'js/script.js' %}"></script>
     {% endblock %}
 
     {% block extra_js %}
