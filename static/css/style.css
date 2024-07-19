@@ -1,0 +1,59 @@
+/* Add Google Fonts Lora and Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Default styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    padding: 1rem 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 100;
+    background: linear-gradient(to left, #f2bdbd, #cfb6f2, #acd1f2, #cef2c4, #f2bdbd, #cfb6f2, #acd1f2, #cef2c4);
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+}
+
+nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
