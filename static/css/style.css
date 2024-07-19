@@ -24,7 +24,7 @@ header {
 
 h1 {
     font-size: 2rem;
-    font-weight: 100;
+    font-weight: 300;
     background: linear-gradient(to left, #f2bdbd, #cfb6f2, #acd1f2, #cef2c4, #f2bdbd, #cfb6f2, #acd1f2, #cef2c4);
     background-clip: text;
     color: transparent;
