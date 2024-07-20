@@ -1,8 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/events.css' %}">
+{% endblock %}
 
 {% block content %}
-
-// event list page content goes here (List main page)
-
+<div class="spacer"></div>
+<h2>Events</h2>
+<ul>
+    {% for event in events %}
+    <li>
+        <a href="{% url 'event_detail' event.pk %}">{{ event.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'event_create' %}">Add New Event</a>
 {% endblock %}

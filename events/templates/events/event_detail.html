@@ -1,8 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/events.css' %}">
+{% endblock %}
 
 {% block content %}
-
-// event detail page content goes here (Event details pages)
-
+<div class="spacer"></div>
+<h2>{{ event.name }}</h2>
+<p>{{ event.description }}</p>
+<p>{{ event.event_date }}</p>
+<p>{{ event.venue_name }}</p>
+<p>{{ event.venue_address }}</p>
+<p>{{ event.entry_fee }}</p>
+<img src="{{ event.image.url }}" alt="{{ event.name }}">
+<a href="{% url 'event_edit' event.pk %}">Edit</a>
+<a href="{% url 'event_delete' event.pk %}">Delete</a>
 {% endblock %}

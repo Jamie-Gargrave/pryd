@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/events.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="spacer"></div>
+<h2>{{ form.instance.pk|yesno:"Edit Event,Create Event" }}</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    <div class="form-group">
+        <label for="{{ form.name.id_for_label }}">Name:</label>
+        {{ form.name }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.event_date.id_for_label }}">Event Date:</label>
+        <input type="datetime-local" name="{{ form.event_date.name }}" id="{{ form.event_date.id_for_label }}">
+        {{ form.event_date.errors }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.venue_name.id_for_label }}">Venue Name:</label>
+        {{ form.venue_name }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.venue_address.id_for_label }}">Venue Address:</label>
+        {{ form.venue_address }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.entry_fee.id_for_label }}">Entry Fee:</label>
+        {{ form.entry_fee }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.description.id_for_label }}">Description:</label>
+        {{ form.description }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.image.id_for_label }}">Image:</label>
+        {{ form.image }}
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+{% endblock %}
