@@ -9,13 +9,13 @@
     <nav>
         <ul>
             <li>
-                <a href="{% url 'home' %}" class="active">Home</a>
+                <a href="{% url 'home' %}" {% if request.resolver_match.url_name == 'home' %}class="active"{% endif %}>Home</a>
             </li>
             <li>
-                <a href="{% url 'event_list' %}">Find event</a>
+                <a href="{% url 'event_list' %}" {% if request.resolver_match.url_name == 'event_list' %}class="active"{% endif %}>Find event</a>
             </li>
             <li>
-                <a href="{% url 'event_create' %}">Host event</a>
+                <a href="{% url 'event_create' %}" {% if request.resolver_match.url_name == 'event_create' %}class="active"{% endif %}>Host event</a>
             </li>
         </ul>
     </nav>
