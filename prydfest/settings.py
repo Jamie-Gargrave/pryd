@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['prydfest.herokuapp.com']
+ALLOWED_HOSTS = ['prydfest-918fa0deecd1.herokuapp.com']
 
 
 # Application definition
