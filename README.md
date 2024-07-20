@@ -19,7 +19,7 @@ joe succesful 2 now with rules ENFORCED!
 
 #### _(please note, your team must also include the deployed links in the usual submission in Hackapp)_
 
-The project is deployed and can be accessed at [http://your-deployed-link.com](http://your-deployed-link.com).
+The project is deployed and can be accessed at [https://prydfest-918fa0deecd1.herokuapp.com/#](https://prydfest-918fa0deecd1.herokuapp.com/#).
 
 ## Criteria
 
