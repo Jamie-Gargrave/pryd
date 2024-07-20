@@ -1,8 +1,29 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
 {% block content %}
 
-// homePage content goes here
+<main>
+    <div id="rainbow-container">
+        <div class="modal">
+            <h2 class="rainbow-text">PrydFest</h2>
+            <h3>Celebrate, Connect, and Discover Pride Events with PrydFest</h3>
+            <section>
+                <h4>Find Pride Events</h4>
+                <p>We have a great selection of pride events happening near you. Get your weekend moving with our easy event finder</p>
+                <a href="{% url 'event_list' %}"><button class="link-button">Find Events</button></a>
+            </section>
+            <section>
+                <h4>Hosting a Pride Event?</h4>
+                <p>Register your event with us to let everyone know where you are and what celebrations you'll be hosting.</p>
+                <a href="#"><button class="link-button">Register Event</button></a>
+            </section>
+        </div>
+    </div>
+</main>
 
 {% endblock %}
