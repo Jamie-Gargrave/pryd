@@ -1,0 +1,56 @@
+#event-container {
+    background: url('/media/event-bg.webp') no-repeat center center / cover;
+}
+
+#event-title,
+#event-info-container {
+    min-height: 50%;
+    height: auto;
+}
+
+#event-title {
+    display: flex;
+}
+
+#event-title h2 {
+    align-self: center;
+}
+
+#event-info-container {
+    background-color: white;
+    position: relative;
+}
+
+#event-info-container,
+#event-info-container h3,
+#event-info-container h4 {
+    text-align: left;
+}
+
+#event-signup {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+/* Media query for tablets (768px) and below */
+
+@media screen and (max-width: 768px) {
+    
+}
+
+/* Media query for mobile (576px) and below */
+
+@media screen and (max-width: 576px) {
+    #event-info-container h3 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    #event-signup {
+        position: static;
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
