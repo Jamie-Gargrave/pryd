@@ -1,0 +1,162 @@
+/* Add Google Fonts Montserrat and Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Default styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Components */
+
+.rainbow-text {
+    background: linear-gradient(to left, #f20519, #710273, #0511F2, #0B8C07, #F2E307, #F20519, #710273, #0511F2);
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+}
+
+.link-button {
+    border: none;
+    background-color: #F2E307;
+    padding: 15px 30px;
+    font-size: 1rem;
+}
+
+.link-button:hover {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    padding: 1rem 2rem;
+    z-index: 10;
+}
+
+header a {
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+}
+
+nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 2rem;
+    font-size: 1.25rem;
+    line-height: 70px;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    color: black;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    font-size: 1.75rem;
+}
+
+/* Main content */
+main {
+    /* Position the main content below the fixed header */
+    position: relative;
+    top: 70px;
+}
+
+/* Footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    padding: 0.75rem 1rem;
+    text-align: right;
+}
+
+/* Media query for tablets (768px) and below */
+
+@media screen and (max-width: 768px) {
+}
+
+/* Media query for mobile (576px) and below */
+
+@media screen and (max-width: 576px) {
+    nav {
+        display: none;
+    }
+
+    #nav-toggle:checked~nav {
+        display: block;
+        position: absolute;
+        top: 70px;
+        background-color: white;
+        width: 100%;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+}
