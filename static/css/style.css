@@ -24,7 +24,8 @@ body {
     width: fit-content;
 }
 
-.link-button {
+.link-button,
+button[type=submit]{
     border: none;
     background-color: #F2E307;
     padding: 15px 30px;
@@ -63,8 +64,57 @@ h4 {
     /* Header is 70px high and footer is 50px high */
     height: calc(100vh - 70px - 50px);
     overflow: scroll;
+    padding-top: 50px;
 }
 
+#login-container,
+#verification-container,
+#email-confirm-container,
+#password-reset-container {
+    background: url('/media/login-bg.webp') no-repeat center center / cover;
+}
+
+form {
+    margin-top: 30px;
+}
+
+form p,
+form ul,
+form div {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+form p,
+form div {
+    margin: 30px auto;
+}
+
+.helptext {
+    display: block;
+    grid-column-start: 2;
+    margin-top: 30px;
+}
+
+form ul {
+    list-style: none;
+    font-size: 0.75rem;
+    text-align: left;
+}
+
+form li {
+    grid-column-start: 2;
+}
+
+form input,
+form textarea,
+.helptext {
+    width: 80%;
+}
+
+#id_remember {
+    width: 25px;
+}
 
 .modal {
     background-color: rgba(255, 255, 255, .7);
@@ -167,6 +217,10 @@ footer {
         width: 100%;
         height: 100%;
     }
+
+    .full-height-container {
+        padding-top: 0;
+    }
 }
 
 /* Media query for mobile (576px) and below */
@@ -195,5 +249,21 @@ footer {
     .modal {
         min-height: 100%;
         height: fit-content;
+    }
+
+    form p,
+    form ul,
+    form div,
+    form label,
+    form input {
+        display: block;
+    }
+
+    form input {
+        margin: 0 auto;
+    }
+
+    .helptext {
+        margin: 30px auto 0 auto;
     }
 }
