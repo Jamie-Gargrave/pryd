@@ -1,1 +1,1 @@
-web: npm run compile-scss && python manage.py migrate && gunicorn prydfest.wsgi
+web: python manage.py migrate && gunicorn prydfest.wsgi
