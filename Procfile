@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn prydfest.wsgi
+web: gunicorn prydfest.wsgi
