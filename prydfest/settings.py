@@ -187,9 +187,7 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = reverse_lazy('home')
 
 # Email backend settings
-if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-else:
+if DATABASE_URL:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_HOST = 'smtp.gmail.com'
     EMAIL_PORT = 587
@@ -197,3 +195,5 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
     DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'webmaster@localhost')
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
