@@ -1,14 +1,11 @@
 #rainbow-container {
     background: url('/media/index-bg.webp') no-repeat center center / cover;
-    padding-top: 50px;
 }
 
 /* Media query for tablets (768px) and below */
 
 @media screen and (max-width: 768px) {
-    #rainbow-container {
-        padding-top: 0;
-    }
+    
 }
 
 /* Media query for mobile (576px) and below */

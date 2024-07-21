@@ -4,22 +4,26 @@
     {% trans "Sign Out" %}
 {% endblock head_title %}
 {% block content %}
-    {% element h1 %}
-        {% trans "Sign Out" %}
-    {% endelement %}
-    {% element p %}
-        {% trans 'Are you sure you want to sign out?' %}
-    {% endelement %}
-    {% url 'account_logout' as action_url %}
-    {% element form method="post" action=action_url no_visible_fields=True %}
-        {% slot body %}
-            {% csrf_token %}
-            {{ redirect_field }}
-        {% endslot %}
-        {% slot actions %}
-            {% element button type="submit" %}
-                {% trans 'Sign Out' %}
+    <div class="full-height-container" id="login-container">
+        <div class="modal">
+            <h2>
+                {% trans "Sign Out" %}
+            </h2>
+            {% element p %}
+                {% trans 'Are you sure you want to sign out?' %}
             {% endelement %}
-        {% endslot %}
-    {% endelement %}
+            {% url 'account_logout' as action_url %}
+            {% element form method="post" action=action_url no_visible_fields=True %}
+                {% slot body %}
+                    {% csrf_token %}
+                    {{ redirect_field }}
+                {% endslot %}
+                {% slot actions %}
+                    {% element button type="submit" %}
+                        {% trans 'Sign Out' %}
+                    {% endelement %}
+                {% endslot %}
+            {% endelement %}
+        </div>
+    </div>
 {% endblock content %}

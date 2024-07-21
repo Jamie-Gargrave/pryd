@@ -64,13 +64,18 @@ h4 {
     /* Header is 70px high and footer is 50px high */
     height: calc(100vh - 70px - 50px);
     overflow: scroll;
+    padding-top: 50px;
 }
 
 #login-container,
 #verification-container,
-#email-confirm-container {
+#email-confirm-container,
+#password-reset-container {
     background: url('/media/login-bg.webp') no-repeat center center / cover;
-    padding-top: 50px;
+}
+
+form {
+    margin-top: 30px;
 }
 
 form p,
@@ -85,8 +90,10 @@ form div {
     margin: 30px auto;
 }
 
-form .helptext {
+.helptext {
+    display: block;
     grid-column-start: 2;
+    margin-top: 30px;
 }
 
 form ul {
@@ -100,7 +107,8 @@ form li {
 }
 
 form input,
-form textarea {
+form textarea,
+.helptext {
     width: 80%;
 }
 
@@ -209,6 +217,10 @@ footer {
         width: 100%;
         height: 100%;
     }
+
+    .full-height-container {
+        padding-top: 0;
+    }
 }
 
 /* Media query for mobile (576px) and below */
@@ -249,5 +261,9 @@ footer {
 
     form input {
         margin: 0 auto;
+    }
+
+    .helptext {
+        margin: 30px auto 0 auto;
     }
 }
