@@ -1,0 +1,11 @@
+.events {
+    height: 500px;
+    width: auto;
+}
+
+.backgroundImg {
+    background-image: url(/media/event-bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
