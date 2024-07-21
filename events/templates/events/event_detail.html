@@ -7,9 +7,6 @@
 
 {% block content %}
 
-<!-- <img src="{{ event.image.url }}" alt="{{ event.name }}">  -->
-
-
 <div id="event-container" class="full-height-container">
     <div id="event-title" class="modal">
         <h2 class="rainbow-text">{{ event.name }} - {{ event.venue_name }}</h2>
@@ -17,9 +14,21 @@
     <div id="event-info-container" class="modal">
         <h3>Event Overview</h3>
 
-        <a id="event-signup" href="#">
-            <button class="link-button">Sign up</button>
+        {% if user.is_authenticated %}
+        <div id='event-signup'>
+            <p> Would you like to add an Event?</p>
+        <a href="{% url 'event_create' %}">
+            <button class="link-button">Add Event</button>
         </a>
+        </div>
+        {% else %}
+        <div id='event-signup'>
+            <p> Would you like to add an Event?</p>
+        <a href="{% url 'account_signup' %}">
+            <button class="link-button">Sign Up</button>
+        </a>
+        </div>
+        {% endif %}
 
         <section>
             <h4>Date</h4>
