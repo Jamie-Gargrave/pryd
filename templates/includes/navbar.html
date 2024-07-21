@@ -23,10 +23,10 @@
                 </li>
             {% else %}
                 <li>
-                    <a href="{% url 'account_login' %}">Sign In</a>
+                    <a href="{% url 'account_login' %}" {% if request.resolver_match.url_name == 'account_login' %}class="active"{% endif %}>Sign In</a>
                 </li>
                 <li>
-                    <a href="{% url 'account_signup' %}">Sign Up</a>
+                    <a href="{% url 'account_signup' %}" {% if request.resolver_match.url_name == 'account_signup' %}class="active"{% endif %}>Sign Up</a>
                 </li>
             {% endif %}
         </ul>
