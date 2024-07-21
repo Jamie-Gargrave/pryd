@@ -7,9 +7,7 @@
 
 {% block content %}
 
-<!-- <img src="{{ event.image.url }}" alt="{{ event.name }}">
-<a href="{% url 'event_edit' event.pk %}">Edit</a>
-<a href="{% url 'event_delete' event.pk %}">Delete</a> -->
+<!-- <img src="{{ event.image.url }}" alt="{{ event.name }}">  -->
 
 
 <div id="event-container" class="full-height-container">
@@ -43,7 +41,12 @@
 
             <p>{{ event.description }}</p>
         </section>
+        {% if event.created_by == request.user or request.user.is_superuser %}
+            <a href="{% url 'event_edit' event.pk %}">Edit</a>
+            <a href="{% url 'event_delete' event.pk %}">Delete</a>
+        {% endif %}
     </div>
+    
 </div>
 
 {% endblock %}
