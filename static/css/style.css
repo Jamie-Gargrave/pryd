@@ -72,12 +72,14 @@ h4 {
 }
 
 form p,
-form ul {
+form ul,
+form div {
     display: grid;
     grid-template-columns: 30% 70%;
 }
 
-form p {
+form p,
+form div {
     margin: 30px auto;
 }
 
@@ -93,6 +95,10 @@ form ul {
 
 form li {
     grid-column-start: 2;
+}
+
+form input {
+    width: 80%;
 }
 
 #id_remember {
@@ -228,5 +234,17 @@ footer {
     .modal {
         min-height: 100%;
         height: fit-content;
+    }
+
+    form p,
+    form ul,
+    form div,
+    form label,
+    form input {
+        display: block;
+    }
+
+    form input {
+        margin: 0 auto;
     }
 }
