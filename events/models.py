@@ -8,7 +8,6 @@ class Event(models.Model):
     venue_address = models.CharField(max_length=300)
     entry_fee = models.DecimalField(max_digits=6, decimal_places=2)
     description = models.TextField()
-    image = models.ImageField(upload_to='event_images/')
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
