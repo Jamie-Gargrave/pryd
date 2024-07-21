@@ -13,13 +13,20 @@
         <h3>Celebrate, Connect, and Discover Pride Events with PrydFest</h3>
         <section>
             <h4>Find Pride Events</h4>
-            <p>We have a great selection of pride events happening near you. Get your weekend moving with our easy event finder</p>
+            <p>We have a great selection of pride events happening near you. Get your weekend moving with our easy event
+                finder</p>
             <a href="{% url 'event_list' %}"><button class="link-button">Find Events</button></a>
         </section>
         <section>
             <h4>Hosting a Pride Event?</h4>
-            <p>Register your event with us to let everyone know where you are and what celebrations you'll be hosting.</p>
+            <p>Register your event with us to let everyone know where you are and what celebrations you'll be hosting.
+            </p>
+            {% if user.is_authenticated %}
             <a href="{% url 'event_create' %}"><button class="link-button">Register Event</button></a>
+            {% else %}
+            <a href="{% url 'account_signup' %}"><button class="link-button">Sign Up</button></a>
+            <a href="{% url 'account_login' %}"><button class="link-button">Sign In</button></a>
+            {% endif %}
         </section>
     </div>
 </div>
