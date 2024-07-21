@@ -11,3 +11,4 @@ node_modules/
 cloudinary_python.txt
 pryd_env/
 media/event_images
+db.sqlite3
