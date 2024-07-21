@@ -14,9 +14,7 @@ from pathlib import Path
 from django.urls import reverse_lazy
 import os
 from dotenv import load_dotenv
-import django_heroku
 import dj_database_url
-from decouple import config
 
 # Load .env file
 load_dotenv()
@@ -101,12 +99,18 @@ WSGI_APPLICATION = 'prydfest.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# Default database setting (SQLite for development)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# Override with PostgreSQL settings if DATABASE_URL is set
+DATABASE_URL = os.environ.get('DATABASE_URL', default=None)
+if DATABASE_URL:
+    DATABASES['default'] = dj_database_url.parse(DATABASE_URL)
 
 
 # Password validation
