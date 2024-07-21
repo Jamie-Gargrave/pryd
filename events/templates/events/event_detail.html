@@ -15,19 +15,11 @@
         <h3>Event Overview</h3>
 
         {% if user.is_authenticated %}
-        <div id='event-signup'>
-            <p> Would you like to add an Event?</p>
-        <a href="{% url 'event_create' %}">
-            <button class="link-button">Add Event</button>
-        </a>
-        </div>
-        {% else %}
-        <div id='event-signup'>
-            <p> Would you like to add an Event?</p>
-        <a href="{% url 'account_signup' %}">
-            <button class="link-button">Sign Up</button>
-        </a>
-        </div>
+            <div id='event-signup'>
+                <a href="{% url 'event_create' %}">
+                    <button class="link-button">Add Event</button>
+                </a>
+            </div>
         {% endif %}
 
         <section>
@@ -51,8 +43,12 @@
             <p>{{ event.description }}</p>
         </section>
         {% if event.created_by == request.user or request.user.is_superuser %}
-            <a href="{% url 'event_edit' event.pk %}">Edit</a>
-            <a href="{% url 'event_delete' event.pk %}">Delete</a>
+            <a href="{% url 'event_edit' event.pk %}">
+                <button class="link-button">Edit</button>
+            </a>
+            <a href="{% url 'event_delete' event.pk %}">
+                <button class="link-button">Delete</button>
+            </a>
         {% endif %}
     </div>
     
