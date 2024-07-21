@@ -24,7 +24,8 @@ body {
     width: fit-content;
 }
 
-.link-button {
+.link-button,
+button[type=submit]{
     border: none;
     background-color: #F2E307;
     padding: 15px 30px;
@@ -65,6 +66,38 @@ h4 {
     overflow: scroll;
 }
 
+#login-container {
+    background: url('/media/login-bg.webp') no-repeat center center / cover;
+    padding-top: 50px;
+}
+
+form p,
+form ul {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+form p {
+    margin: 30px auto;
+}
+
+form .helptext {
+    grid-column-start: 2;
+}
+
+form ul {
+    list-style: none;
+    font-size: 0.75rem;
+    text-align: left;
+}
+
+form li {
+    grid-column-start: 2;
+}
+
+#id_remember {
+    width: 25px;
+}
 
 .modal {
     background-color: rgba(255, 255, 255, .7);
