@@ -14,6 +14,9 @@ from pathlib import Path
 from django.urls import reverse_lazy
 import os
 from dotenv import load_dotenv
+import django_heroku
+import dj_database_url
+from decouple import config
 
 # Load .env file
 load_dotenv()
