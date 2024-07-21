@@ -97,7 +97,8 @@ form li {
     grid-column-start: 2;
 }
 
-form input {
+form input,
+form textarea {
     width: 80%;
 }
 
