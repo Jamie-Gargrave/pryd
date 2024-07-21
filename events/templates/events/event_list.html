@@ -5,8 +5,23 @@
 {% endblock %}
 
 {% block content %}
-<section class=" events backgroundImg">
-    <h2>Events</h2>
+<section class="events">
+    <div class="backgroundImg"></div>
+    <div class="eventsInfo">
+        <h2>Events</h2>
+        <p>You can find out about local events here!</p>
+    </div>
+</section>
+<section id="hotEvents">
+    <h2>Hot Events</h2>
+    <div class="wrapper">
+        <div class="container">
+            t
+        </div>
+        <div class="container">
+            t
+        </div>
+    </div>
 </section>
 
 
@@ -16,12 +31,12 @@
 
 
 
-<ul>
+<!-- <ul>
     {% for event in events %}
     <li>
         <a href="{% url 'event_detail' event.pk %}">{{ event.name }}</a>
     </li>
     {% endfor %}
 </ul>
-<a href="{% url 'event_create' %}">Add New Event</a>
+<a href="{% url 'event_create' %}">Add New Event</a> -->
 {% endblock %}

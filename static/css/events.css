@@ -8,4 +8,43 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 500px;
+}
+
+.eventsInfo {
+    background-color: rgba(245, 245, 245, 0.734);
+    border-radius: 10px; 
+    border: 1px solid white;
+    width: 350px;
+    padding: 25px;
+    text-align: center;
+    margin: -200px auto;
+}
+
+#hotEvents {
+    height: 700px;
+    width: auto;
+    margin: 10px 0;
+}
+
+#hotEvents h2 {
+    text-align: left;
+    margin-left: 30px;
+    padding: 10px 0;
+} 
+
+.wrapper {
+    display: flex;
+    justify-content: flex-start;
+    height: auto;
+    width: auto;
+    margin-left: 20px;
+}
+
+.container {
+    height: 400px;
+    width: 300px;
+    margin: 20px 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
 }
