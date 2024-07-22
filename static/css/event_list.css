@@ -32,8 +32,27 @@
     color: black;
     text-decoration: none;
     padding: 30px 25px;
-    background-color: #e0e0e0;
     width: 300px;
+}
+
+#event-list a:nth-child(5n) .event-card {
+    background-color: #f2bdbd;
+}
+
+#event-list a:nth-child(5n + 1) .event-card {
+    background-color: #cfb6f2;
+}
+
+#event-list a:nth-child(5n + 2) .event-card {
+    background-color: #acd1f2;
+}
+
+#event-list a:nth-child(5n + 3) .event-card {
+    background-color: #cef2c4;
+}
+
+#event-list a:nth-child(5n + 4) .event-card {
+    background-color: #f2e8b6;
 }
 
 .event-card:hover {
