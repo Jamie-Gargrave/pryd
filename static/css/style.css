@@ -69,6 +69,16 @@ h4 {
     padding-top: 50px;
 }
 
+.full-height-container::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.full-height-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 #login-container,
 #verification-container,
 #email-confirm-container,
