@@ -1,8 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/events.css' %}">
-{% endblock %}
 
 {% block content %}
 <div class="full-height-container" id="login-container">
@@ -37,6 +34,12 @@
                 {{ form.description }}
             </div>
             <button type="submit" class="btn btn-primary">Save</button>
+
+            {% if form.instance.pk %}
+                <a href="{% url 'event_detail' form.instance.pk %}" class="btn btn-secondary">Cancel</a>
+            {% else %}
+                <a href="{% url 'event_list' %}" class="btn btn-secondary">Cancel</a>
+            {% endif %}
         </form>
     </div>
 </div>
