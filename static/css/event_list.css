@@ -33,6 +33,7 @@
     text-decoration: none;
     padding: 30px 25px;
     width: 300px;
+    height: 250px;
 }
 
 #event-list a:nth-child(5n) .event-card {
