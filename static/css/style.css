@@ -25,15 +25,39 @@ body {
 }
 
 .link-button,
+.btn-primary,
+.btn-secondary,
 button[type=submit]{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: black;
     border: none;
-    background-color: #F2E307;
     padding: 15px 30px;
     font-size: 1rem;
+    line-height: 23px;
 }
 
-.link-button:hover {
+.btn-secondary,
+.link-button {
+    background-color: #F2E307;
+}
+
+.link-button:hover,
+.btn-secondary:hover {
     cursor: pointer;
+    background-color: #f2b507;
+}
+
+.btn-primary,
+button[type=submit] {
+    color: white;
+    background-color: #0B8C07;
+}
+
+.btn-primary:hover,
+button[type=submit]:hover {
+    cursor: pointer;
+    background-color: #078c80;
 }
 
 h1,
@@ -65,6 +89,16 @@ h4 {
     height: calc(100vh - 70px - 50px);
     overflow: scroll;
     padding-top: 50px;
+}
+
+.full-height-container::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.full-height-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 #login-container,

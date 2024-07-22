@@ -15,19 +15,9 @@
         <h3>Event Overview</h3>
 
         {% if user.is_authenticated %}
-        <div id='event-signup'>
-            <p> Would you like to add an Event?</p>
-        <a href="{% url 'event_create' %}">
-            <button class="link-button">Add Event</button>
-        </a>
-        </div>
-        {% else %}
-        <div id='event-signup'>
-            <p> Would you like to add an Event?</p>
-        <a href="{% url 'account_signup' %}">
-            <button class="link-button">Sign Up</button>
-        </a>
-        </div>
+            <div id='event-signup'>
+                <a href="{% url 'event_create' %}" class="link-button btn-primary">Add Event</a>
+            </div>
         {% endif %}
 
         <section>
@@ -42,7 +32,7 @@
 
         <section>
             <h4>Entry Fee</h4>
-            <p>{{ event.entry_fee }}</p>
+            <p>&pound;{{ event.entry_fee }}</p>
         </section>
 
         <section>
@@ -51,8 +41,8 @@
             <p>{{ event.description }}</p>
         </section>
         {% if event.created_by == request.user or request.user.is_superuser %}
-            <a href="{% url 'event_edit' event.pk %}">Edit</a>
-            <a href="{% url 'event_delete' event.pk %}">Delete</a>
+            <a href="{% url 'event_edit' event.pk %}" class="link-button">Edit</a>
+            <a href="{% url 'event_delete' event.pk %}" class="link-button">Delete</a>
         {% endif %}
     </div>
     
