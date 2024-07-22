@@ -32,18 +32,32 @@ button[type=submit]{
     text-decoration: none;
     color: black;
     border: none;
-    background-color: #F2E307;
     padding: 15px 30px;
     font-size: 1rem;
     line-height: 23px;
 }
 
+.btn-secondary,
+.link-button {
+    background-color: #F2E307;
+}
+
 .link-button:hover,
-.btn-primary:hover,
-.btn-secondary:hover,
-button[type=submit]:hover {
+.btn-secondary:hover {
     cursor: pointer;
     background-color: #f2b507;
+}
+
+.btn-primary,
+button[type=submit] {
+    color: white;
+    background-color: #0B8C07;
+}
+
+.btn-primary:hover,
+button[type=submit]:hover {
+    cursor: pointer;
+    background-color: #078c80;
 }
 
 h1,

@@ -27,10 +27,15 @@
     text-align: left;
 }
 
+#event-info-container .link-button {
+    display: inline-block;
+}
+
 #event-signup {
     position: absolute;
     top: 20px;
     right: 30px;
+    padding: 15px 0;
 }
 
 /* Media query for tablets (768px) and below */

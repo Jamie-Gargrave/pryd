@@ -16,9 +16,7 @@
 
         {% if user.is_authenticated %}
             <div id='event-signup'>
-                <a href="{% url 'event_create' %}">
-                    <button class="link-button">Add Event</button>
-                </a>
+                <a href="{% url 'event_create' %}" class="link-button btn-primary">Add Event</a>
             </div>
         {% endif %}
 
@@ -43,12 +41,8 @@
             <p>{{ event.description }}</p>
         </section>
         {% if event.created_by == request.user or request.user.is_superuser %}
-            <a href="{% url 'event_edit' event.pk %}">
-                <button class="link-button">Edit</button>
-            </a>
-            <a href="{% url 'event_delete' event.pk %}">
-                <button class="link-button">Delete</button>
-            </a>
+            <a href="{% url 'event_edit' event.pk %}" class="link-button">Edit</a>
+            <a href="{% url 'event_delete' event.pk %}" class="link-button">Delete</a>
         {% endif %}
     </div>
     
